@@ -1,0 +1,234 @@
+.stream-filters {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.filters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.filters-header h4 {
+    margin: 0;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.expand-button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.expand-button:hover {
+    background: #e9ecef;
+    color: #333;
+}
+
+.filters-content {
+    padding: 1rem;
+}
+
+.filter-section {
+    margin-bottom: 1rem;
+}
+
+.filter-section:last-child {
+    margin-bottom: 0;
+}
+
+.filter-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.event-type-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.event-type-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.event-type-button:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.event-type-button.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.event-type-icon {
+    font-size: 1rem;
+}
+
+.event-type-label {
+    font-weight: 500;
+}
+
+.time-range-select {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.time-range-select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.clear-filters-button {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.clear-filters-button:hover {
+    background: #c82333;
+}
+
+.active-filters {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.active-filters h5 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.filter-tag {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.filter-summary {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #e9ecef;
+    background: #f8f9fa;
+}
+
+.summary-active,
+.summary-inactive {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.summary-active {
+    color: #28a745;
+}
+
+.summary-inactive {
+    color: #666;
+}
+
+.summary-icon {
+    font-size: 0.9rem;
+}
+
+.summary-text {
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-type-filters {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .event-type-button {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .filter-tags {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

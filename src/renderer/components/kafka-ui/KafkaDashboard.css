@@ -1,0 +1,234 @@
+.kafka-dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #f8f9fa;
+}
+
+.kafka-header {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.kafka-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.kafka-title h2 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.connection-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-text {
+    color: #666;
+    font-weight: 500;
+}
+
+.view-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.view-button {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #666;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.view-button:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.view-button.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.kafka-error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #f5c6cb;
+}
+
+.kafka-error p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.kafka-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.kafka-sidebar {
+    width: 250px;
+    background: white;
+    border-right: 1px solid #e9ecef;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.sidebar-section {
+    margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.25rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.sidebar-button:hover {
+    background: #f8f9fa;
+    color: #333;
+}
+
+.sidebar-button.active {
+    background: #e3f2fd;
+    color: #1976d2;
+    font-weight: 500;
+}
+
+.kafka-main {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    background: #f8f9fa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .kafka-header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .kafka-title {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .view-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .kafka-content {
+        flex-direction: column;
+    }
+
+    .kafka-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e9ecef;
+        padding: 1rem;
+    }
+
+    .kafka-main {
+        padding: 1rem;
+    }
+}
+
+/* Loading States */
+.kafka-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: #666;
+}
+
+.kafka-loading::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 0.5rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Empty States */
+.kafka-empty {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #666;
+}
+
+.kafka-empty h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.kafka-empty p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}

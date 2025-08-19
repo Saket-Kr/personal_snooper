@@ -1,0 +1,21 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./dist/agent",
+        "module": "commonjs",
+        "target": "ES2022",
+        "lib": [
+            "ES2022"
+        ],
+        "jsx": "react-jsx"
+    },
+    "include": [
+        "src/agent/**/*",
+        "src/shared/**/*"
+    ],
+    "exclude": [
+        "src/main/**/*",
+        "src/renderer/**/*",
+        "src/e2e/**/*"
+    ]
+}
